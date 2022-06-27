@@ -1,10 +1,7 @@
 <?php
 
 //Settingan BASEURL
-  define('BASEURL', 'http://localhost:8080/tugas-besar-pabw/public'); //sesuaikan dengan port localhost
-  // define('BASEURL', 'http://rezerva.test:4040/tugas-besar-pabw/public');
-  // define('BASEURL', 'http://localhost:80/tugas-besar-pabw/public');
-
+  define('BASEURL', 'http://localhost:8080/psi-rezerva/public'); //sesuaikan dengan port localhost
 //Settingan DATABASE
   define('DRIVER', 'mysql');
   define('HOST', 'localhost');
