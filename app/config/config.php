@@ -3,6 +3,7 @@
 //Settingan BASEURL
   define('BASEURL', 'http://localhost:8080/psi-rezerva/public'); //sesuaikan dengan port localhost
 //Settingan DATABASE
+
   define('DRIVER', 'mysql');
   define('HOST', 'localhost');
   define('DATABASE', 'rezerva');
