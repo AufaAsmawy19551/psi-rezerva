@@ -131,6 +131,7 @@
   </div>
 </div>
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.js'></script>
 <?php 
-chart_bulanan('chartMonth', $data['pendapatan_perbulan'], 'bar')
+chart_bulanan('chartMonth', $data['pendapatan_perbulan'], 'line');
 ?>

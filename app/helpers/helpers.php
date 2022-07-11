@@ -30,10 +30,7 @@ function success_and_error($message, $type){
   }
 }
 
-function chart_bulanan($id, $data, $type, $bgCol='transparent', $brCol='#11cdef', $brWid=2){
-  echo"
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.js'></script>
-  ";
+function chart_bulanan($id, $data, $type, $bgCol= '#11cdef', $brCol='#11cdef', $brWid=2){
 
   $dataBulanan = $data;
 
@@ -45,8 +42,8 @@ function chart_bulanan($id, $data, $type, $bgCol='transparent', $brCol='#11cdef'
   
   echo <<<TEXT
     <script>
-      const ct = document.getElementById('$id').getContext('2d');
-      const chartMonth = new Chart(ct, {
+      const ct1 = document.getElementById('$id').getContext('2d');
+      const chartMonth = new Chart(ct1, {
         type: '$type',
         data: {
           labels: ['JAN', 'FEB', 'MAR', 'APR', 'MEI', 'JUN', 'JUL', 'AGU', 'SEP', 'OKT', 'NOV', 'DES'],
@@ -55,8 +52,55 @@ function chart_bulanan($id, $data, $type, $bgCol='transparent', $brCol='#11cdef'
             data: [$insideData],
             backgroundColor:'$bgCol',
             borderColor:'$brCol',
-            borderWidth: $brWid
+            borderWidth: $brWid,
+            cubicInterpolationMode: 'monotone',
+            tension: 0.4
           }]
+        },
+        options: {
+          plugins: {
+            legend: {
+              display: false
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    </script>
+  TEXT;
+}
+
+function multiple_chart($id, $data, $type, $bgCol='transparent', $brCol='#11cdef', $brWid=2){
+
+    $insideLabel = "";
+    $insideData  = "";
+    foreach ($data as $element) {
+      $insideLabel .= "'".$element[0]."'";
+      $insideLabel .= ",";
+      $insideData .= $element[1];
+      $insideData .= ",";
+    }
+  
+  echo <<<TEXT
+    <script>
+      const ct2 = document.getElementById('$id').getContext('2d');
+      const chartMenu = new Chart(ct2, {
+        type: '$type',
+        data: {
+          labels: [$insideLabel],
+          datasets: [
+            {
+              label: 'Rp',
+              data: [$insideData],
+              backgroundColor:'$bgCol',
+              borderColor:'$brCol',
+              borderWidth: $brWid
+            },
+          ]
         },
         options: {
           plugins: {
