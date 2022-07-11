@@ -413,5 +413,5 @@ foreach ($menus as $menu) {
 }
 chart_bulanan('chartMonth', $data['pendapatan_perbulan'], 'line');
 
-multiple_chart('chartMenu', $trendAnalisisMenu, 'bar');
+multiple_chart('chartMenu', $trendAnalisisMenu, 'bar', '#11cdef');
 ?>
