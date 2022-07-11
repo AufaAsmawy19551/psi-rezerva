@@ -1,7 +1,7 @@
 <div class="container-fill">
   <!-- Laporan Pendapatan -->
   <div class="row">
-    <div class="col-md-6 pb-0 mb-0 d-flex">
+    <div class="col-md-9 pb-0 mb-0 d-flex">
       <div class="card">
         <div class="card-body">
           <h3 class="text-center"><i class="material-icons">Pendapatan Bulanan Tahun <?=$data['year']?></i></h3>
@@ -9,18 +9,9 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 pb-0 mb-0 d-flex">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="text-center"><i class="material-icons">Populartitas Menu Tahun <?=$data['year']?></i></h3>
-          <canvas id="chartMenu"></canvas>
-        </div>
-      </div>
-    </div>
-  </div>
-
+    <div class="col-md-3">
       <div class="row justify-content-between align-items-center">
-        <div class="col-md-3">
+        <div class="col-md-12">
           <div class="card card-stats">
             <div class="card-header card-header-success card-header-icon">
               <div class="card-icon">
@@ -31,7 +22,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-12">
           <div class="card card-stats">
             <div class="card-header card-header-success card-header-icon">
               <div class="card-icon">
@@ -42,7 +33,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-12">
           <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
               <div class="card-icon">
@@ -53,7 +44,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-12">
           <div class="card card-stats">
             <div class="card-header card-header-danger card-header-icon">
               <div class="card-icon">
@@ -65,7 +56,8 @@
           </div>
         </div>
       </div>
-
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-6 col-lg-3">
@@ -401,17 +393,7 @@
   </div>
 </div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.js'></script>
 
 <?php 
-
-$menus = $data['menus'];
-
-$trendAnalisisMenu = [];
-foreach ($menus as $menu) {
-  array_push($trendAnalisisMenu, [strtoupper($menu->title), $menu->sold * $menu->rating]);
-}
-chart_bulanan('chartMonth', $data['pendapatan_perbulan'], 'line');
-
-multiple_chart('chartMenu', $trendAnalisisMenu, 'bar', '#11cdef');
+chart_bulanan('chartMonth', $data['pendapatan_perbulan'], 'bar')
 ?>

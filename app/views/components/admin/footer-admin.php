@@ -6,7 +6,7 @@
               <ul class="nav" style="padding : 0px 0px 0px 0px;">
                 <li class="nav-item">
                   <a href="javascript:void(0)" class="nav-link" style="padding : 0px 0px 0px 0px; font-weight : 550;">
-                    © 2021 Kelompok Lorem Ipsum | All rights reserved |
+                    © 2022 Kelompok Funtastic Five | All rights reserved |
                   </a>
                 </li>
               </ul>
@@ -17,10 +17,10 @@
                   <a href="javascript:void(0)" class="nav-link" style="padding : 0px 0px 0px 0px; font-weight : 550;">
                     <marquee width="100%" direction="left">
                       MUHAMMAD AUFA ASMAWY - 20523235@STUDENTS.UII.AC.ID |
-                      MUHAMMAD DEVANO ZAIDAN - 20523034@STUDENTS.UII.AC.ID |
-                      MUHAMMAD IHSAN SYAFIUL UMAM - 20523217@STUDENTS.UII.AC.ID |
-                      MOH. ANANDA PUTRA DWIYANTO - 20523198@STUDENTS.UII.AC.ID |
-                      MUHAMMAD FAJAR ANNAUFAL - 18523140@STUDENTS.UII.AC.ID
+                      RAMADHAN PERWIRA JATI - 20523242@STUDENTS.UII.AC.ID |
+                      RISQI MEDYANSAH ICHWAN - 20523169@STUDENTS.UII.AC.ID |
+                      FAUZAN DZAKY - 20523219@STUDENTS.UII.AC.ID |
+                      MUHAMMAD KHAIRULLAH - 20523119@STUDENTS.UII.AC.ID
                     </marquee>
                   </a>
                 </li>
