@@ -53,8 +53,7 @@ function chart_bulanan($id, $data, $type, $bgCol= '#11cdef', $brCol='#11cdef', $
             backgroundColor:'$bgCol',
             borderColor:'$brCol',
             borderWidth: $brWid,
-            cubicInterpolationMode: 'monotone',
-            tension: 0.4
+            
           }]
         },
         options: {
