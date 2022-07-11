@@ -4,7 +4,7 @@
     <div class="col-md-6 pb-0 mb-0 d-flex">
       <div class="card">
         <div class="card-body">
-          <h3 class="text-center"><i class="material-icons">Pendapatan Bulanan Tahun <?=$data['year']?></i></h3>
+          <h3 class="text-center"><i class="material-icons">Pendapatan Bulanan Tahun (Rupiah) <?=$data['year']?></i></h3>
           <canvas id="chartMonth"></canvas>
         </div>
       </div>
@@ -12,7 +12,7 @@
     <div class="col-md-6 pb-0 mb-0 d-flex">
       <div class="card">
         <div class="card-body">
-          <h3 class="text-center"><i class="material-icons">Populartitas Menu Tahun <?=$data['year']?></i></h3>
+          <h3 class="text-center"><i class="material-icons">Populartitas Menu Tahun (Poin) <?=$data['year']?></i></h3>
           <canvas id="chartMenu"></canvas>
         </div>
       </div>
