@@ -25,7 +25,7 @@
                       RAMADHAN PERWIRA JATI - 20523242@STUDENTS.UII.AC.ID |
                       RISQI MEDYANSAH ICHWAN - 20523169@STUDENTS.UII.AC.ID |
                       FAUZAN DZAKY - 20523219@STUDENTS.UII.AC.ID |
-                      MUHAMMAD KHAIRULLAH - 20523119@STUDENTS.UII.AC.ID
+                      MUHAMMAD KHAIRULLAH - 20523009@STUDENTS.UII.AC.ID
                     </marquee>
                   </a>
                 </li>
