@@ -36,8 +36,10 @@ function chart_bulanan($id, $data, $type, $bgCol= '#11cdef', $brCol='#11cdef', $
 
     $insideData = "";
     for ($i = 0; $i < count($dataBulanan); $i++) {
-      $insideData .= $dataBulanan[$i];
-      $insideData .= ",";
+      if ($dataBulanan[$i] != 0 ) {
+        $insideData .= $dataBulanan[$i] ;
+        $insideData .= ",";
+      }
     }
   
   echo <<<TEXT
