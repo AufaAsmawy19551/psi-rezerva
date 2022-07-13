@@ -93,7 +93,7 @@ function multiple_chart($id, $data, $type, $bgCol='transparent', $brCol='#11cdef
           labels: [$insideLabel],
           datasets: [
             {
-              label: 'Rp',
+              label: 'Poin',
               data: [$insideData],
               backgroundColor:'$bgCol',
               borderColor:'$brCol',
