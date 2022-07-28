@@ -15,10 +15,10 @@
 
   <div class="row">
     <div class="col-md-6 pb-0 mb-0 d-flex">
-      <div class="card" style="min-height: 40vh !important;">
+      <div class="card" style="min-height: 30vh !important;">
         <div class="card-body">
           <h3 class="text-center mb-1"><i class="material-icons">Pendapatan Tahun <?=$data['year']?> (Rupiah)</i></h3>
-          <div class="mx-0 my-0 px-0 py-0" style="min-height: 40vh !important; max-height: 40vh !important;">
+          <div class="mx-0 my-0 px-0 py-0" style="min-height: 30vh !important; max-height: 30vh !important;">
             <canvas id="chartMonth"></canvas>
           </div>
         </div>
@@ -26,10 +26,10 @@
     </div>
     <div class="col-md-6 pb-0 mb-0 d-flex" style="padding-bottom: 30px !important;">
 
-      <div class="container mx-0 my-0 px-0 py-0" style="padding-bottom: 30px; min-width: 100%;">
+      <div class="container mx-0 my-0 px-0 py-0" style="min-width: 100%;">
         <div class="row" style="height: 50%;">
           <div class="col-md-6" style="padding-bottom: 15px;">
-            <div class="card card-stats" style="height: 100%;">
+            <div class="card card-stats" style="height: 100%; margin-bottom: 0px;">
               <div class="card-header card-header-success card-header-icon">
                 <div class="card-icon">
                   <i class="material-icons">Pendapatan Hari Ini</i>
@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="col-md-6" style="padding-bottom: 15px;">
-            <div class="card card-stats" style="height: 100%;">
+            <div class="card card-stats" style="height: 100%; margin-bottom: 0px;">
               <div class="card-header card-header-success card-header-icon">
                 <div class="card-icon">
                   <i class="material-icons">Pendapatan Minggu Ini</i>
@@ -54,7 +54,7 @@
 
         <div class="row" style="height: 50%;">
           <div class="col-md-6" style="padding-top: 15px;">
-            <div class="card card-stats" style="height: 100%;">
+            <div class="card card-stats" style="height: 100%; margin-bottom: 0px;">
               <div class="card-header card-header-danger card-header-icon">
                 <div class="card-icon">
                   <i class="material-icons">Pendapatan Bulan Ini</i>
@@ -65,7 +65,7 @@
             </div>
           </div>
           <div class="col-md-6" style="padding-top: 15px;">
-            <div class="card card-stats" style="height: 100%;">
+            <div class="card card-stats" style="height: 100%; margin-bottom: 0px;">
               <div class="card-header card-header-danger card-header-icon">
                 <div class="card-icon">
                   <i class="material-icons">Pendapatan Tahun Ini</i>
@@ -82,20 +82,20 @@
 
   <div class="row">
     <div class="col-md-6 pb-0 mb-0 d-flex">
-      <div class="card" style="min-height: 40vh !important;">
+      <div class="card" style="min-height: 30vh !important;">
         <div class="card-body">
           <h3 class="text-center mb-1"><i class="material-icons">Penjualan Menu Bulan <?=$data['month']?></i></h3>
-          <div class="mx-0 my-0 px-0 py-0" style="min-height: 40vh !important; max-height: 40vh !important;">
+          <div class="mx-0 my-0 px-0 py-0" style="min-height: 30vh !important; max-height: 30vh !important;">
             <canvas id="chartSale"></canvas>
           </div>
         </div>
       </div>
     </div>
     <div class="col-md-6 pb-0 mb-0 d-flex">
-      <div class="card" style="min-height: 40vh !important;">
+      <div class="card" style="min-height: 30vh !important;">
         <div class="card-body">
           <h3 class="text-center mb-1"><i class="material-icons">Rating Menu Bulan <?=$data['month']?></i></h3>
-          <div class="mx-0 my-0 px-0 py-0" style="min-height: 40vh !important; max-height: 40vh !important;">
+          <div class="mx-0 my-0 px-0 py-0" style="min-height: 30vh !important; max-height: 30vh !important;">
             <canvas id="chartRating"></canvas>
           </div>
         </div>

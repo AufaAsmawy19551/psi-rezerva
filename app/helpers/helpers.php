@@ -59,6 +59,8 @@ function chart_bulanan($id, $data, $type, $bgCol= '#11cdef', $brCol='#11cdef', $
           }]
         },
         options: {
+          responsive: true,
+          maintainAspectRatio: false,
           plugins: {
             legend: {
               display: false
@@ -205,7 +207,7 @@ function sale_chart($id, $data, $type, $bgCol='#11cdef', $brCol='#11cdef', $brWi
           labels: [$insideLabel],
           datasets: [
             {
-              label: 'Poin',
+              label: 'Penjualan',
               data: [$insideData],
               backgroundColor:'$bgCol',
               borderColor:'$brCol',
@@ -214,6 +216,8 @@ function sale_chart($id, $data, $type, $bgCol='#11cdef', $brCol='#11cdef', $brWi
           ]
         },
         options: {
+          responsive: true,
+          maintainAspectRatio: false,
           plugins: {
             legend: {
               display: false
@@ -258,7 +262,7 @@ function rating_chart($id, $data, $type, $bgCol='#11cdef', $brCol='#11cdef', $br
           labels: [$insideLabel],
           datasets: [
             {
-              label: 'Poin',
+              label: 'Rating',
               data: [$insideData],
               backgroundColor:'$bgCol',
               borderColor:'$brCol',
@@ -267,6 +271,8 @@ function rating_chart($id, $data, $type, $bgCol='#11cdef', $brCol='#11cdef', $br
           ]
         },
         options: {
+          responsive: true,
+          maintainAspectRatio: false,
           plugins: {
             legend: {
               display: false
