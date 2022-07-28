@@ -34,6 +34,11 @@ class Dashboard_Controller extends Controller{
       'menus' => Menu::with('reviews.customer')->get(),
       'invoices' => Invoice::with('orders.menu','orders.table','customer')->where('status_pesanan', 'dikonfirmasi')->get(),
       'year' => Carbon::today()->format('Y'),
+      'month' => Carbon::today()->format('F'),
+      'dikonfirmasi' => Invoice::where('status_pesanan', 'dikonfirmasi')->count(),
+      'ditolak' => Invoice::where('status_pesanan', 'ditolak')->count(),
+      'diantar' => Invoice::where('status_pesanan', 'diantar')->count(),
+      'diterima' => Invoice::where('status_pesanan', 'diterima')->count(),
     ];
     $this->view('dashboard', $data, 'admin');
   }
@@ -67,6 +72,11 @@ class Dashboard_Controller extends Controller{
         'menus' => Menu::with('reviews.customer')->where('title', 'like', '%'.$search.'%')->get(),
         'invoices' => Invoice::with('orders.menu','orders.table','customer')->where('status_pesanan', 'dikonfirmasi')->get(),
         'year' => Carbon::today()->format('Y'),
+        'month' => Carbon::today()->format('F'),
+        'dikonfirmasi' => Invoice::where('status_pesanan', 'dikonfirmasi')->count(),
+        'ditolak' => Invoice::where('status_pesanan', 'ditolak')->count(),
+        'diantar' => Invoice::where('status_pesanan', 'diantar')->count(),
+        'diterima' => Invoice::where('status_pesanan', 'diterima')->count(),
       ];
       $this->view('dashboard', $data, 'admin');
     }else{
@@ -108,6 +118,11 @@ class Dashboard_Controller extends Controller{
         'menus' => Menu::with('reviews.customer')->get(),
         'invoices' => Invoice::with('orders.menu','orders.table','customer')->where('status_pesanan', 'dikonfirmasi')->whereIn('customer_id', $customers_id)->get(),
         'year' => Carbon::today()->format('Y'),
+        'month' => Carbon::today()->format('F'),
+        'dikonfirmasi' => Invoice::where('status_pesanan', 'dikonfirmasi')->count(),
+        'ditolak' => Invoice::where('status_pesanan', 'ditolak')->count(),
+        'diantar' => Invoice::where('status_pesanan', 'diantar')->count(),
+        'diterima' => Invoice::where('status_pesanan', 'diterima')->count(),
       ];
       $this->view('dashboard', $data, 'admin');
     }else{
