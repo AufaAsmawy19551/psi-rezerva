@@ -4,7 +4,7 @@
     <div class="col-md-6 pb-0 mb-0 d-flex">
       <div class="card">
         <div class="card-body">
-          <h3 class="text-center"><i class="material-icons">Pendapatan Bulanan Tahun <?=$data['year']?> (Rupiah)</i></h3>
+          <h3 class="text-center mb-1"><i class="material-icons">Pendapatan Tahun <?=$data['year']?> (Rupiah)</i></h3>
           <canvas id="chartMonth"></canvas>
         </div>
       </div>
@@ -12,8 +12,27 @@
     <div class="col-md-6 pb-0 mb-0 d-flex">
       <div class="card">
         <div class="card-body">
-          <h3 class="text-center"><i class="material-icons">Popularitas Menu Tahun <?=$data['year']?> (Poin)</i></h3>
-          <canvas id="chartMenu"></canvas>
+          <h3 class="text-center mb-1"><i class="material-icons">Popularitas Menu Tahun <?=$data['year']?> (Poin)</i></h3>
+          <canvas id="chartTrend"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 pb-0 mb-0 d-flex">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="text-center mb-1"><i class="material-icons">Penjualan Menu Bulan <?=$data['month']?></i></h3>
+          <canvas id="chartSale"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 pb-0 mb-0 d-flex">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="text-center mb-1"><i class="material-icons">Rating Menu Bulan <?=$data['month']?></i></h3>
+          <canvas id="chartRating"></canvas>
         </div>
       </div>
     </div>
@@ -408,10 +427,16 @@
 $menus = $data['menus'];
 
 $trendAnalisisMenu = [];
+$sales = [];
+$ratings = [];
 foreach ($menus as $menu) {
-  array_push($trendAnalisisMenu, [strtoupper($menu->title), $menu->sold * $menu->rating]);
+  // array_push($trendAnalisisMenu, [strtoupper($menu->title), $menu->sold * $menu->rating]);
+  array_push($sales, [strtoupper($menu->title), $menu->sold]);
+  array_push($ratings, [strtoupper($menu->title), $menu->rating]);
 }
-chart_bulanan('chartMonth', $data['pendapatan_perbulan'], 'line');
 
-multiple_chart('chartMenu', $trendAnalisisMenu, 'bar', '#11cdef');
+chart_bulanan('chartMonth', $data['pendapatan_perbulan'], 'line', '#2bffc6', '#2bffc6');
+trend_chart('chartTrend');
+sale_chart('chartSale', $sales, 'bar', '#e14eca', '#e14eca');
+rating_chart('chartRating', $ratings, 'bar');
 ?>
