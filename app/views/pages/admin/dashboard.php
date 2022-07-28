@@ -1,17 +1,5 @@
 <div class="container-fill">
   <!-- Laporan Pendapatan -->
-  <div class="row">
-    <div class="col-md-12 pb-0 mb-0 d-flex" >
-      <div class="card" >
-        <div class="card-body" style="min-height: 40vh !important;">
-          <h3 class="text-center mb-1"><i class="material-icons">Trend Analisis Menu Tahun <?=$data['year']?> (Poin)</i></h3>
-          <div class="mx-0 my-0 px-0 py-0" style="min-height: 40vh !important; max-height: 40vh !important;">
-            <canvas id="chartTrend"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="row">
     <div class="col-md-6 pb-0 mb-0 d-flex">
@@ -81,29 +69,6 @@
   </div>
 
   <div class="row">
-    <div class="col-md-6 pb-0 mb-0 d-flex">
-      <div class="card" style="min-height: 30vh !important;">
-        <div class="card-body">
-          <h3 class="text-center mb-1"><i class="material-icons">Penjualan Menu Bulan <?=$data['month']?></i></h3>
-          <div class="mx-0 my-0 px-0 py-0" style="min-height: 30vh !important; max-height: 30vh !important;">
-            <canvas id="chartSale"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 pb-0 mb-0 d-flex">
-      <div class="card" style="min-height: 30vh !important;">
-        <div class="card-body">
-          <h3 class="text-center mb-1"><i class="material-icons">Rating Menu Bulan <?=$data['month']?></i></h3>
-          <div class="mx-0 my-0 px-0 py-0" style="min-height: 30vh !important; max-height: 30vh !important;">
-            <canvas id="chartRating"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
     <div class="col-6 col-lg-3">
       <div class="card border-0 rounded shadow-sm overflow-hidden">
         <div class="card-body p-0 d-flex align-items-center">
@@ -155,6 +120,42 @@
           <div class="pl-2" style="min-width: 100px;">
             <div class="text-value text-danger font-weight-bold"><?= $data['failed'] ?> TRANSAKSI</div>
             <div class="text-danger text-uppercase font-weight-bold">GAGAL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 pb-0 mb-0 d-flex" >
+      <div class="card" >
+        <div class="card-body" style="min-height: 40vh !important;">
+          <h3 class="text-center mb-1"><i class="material-icons">Trend Analisis Menu Tahun <?=$data['year']?> (Poin)</i></h3>
+          <div class="mx-0 my-0 px-0 py-0" style="min-height: 40vh !important; max-height: 40vh !important;">
+            <canvas id="chartTrend"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 pb-0 mb-0 d-flex">
+      <div class="card" style="min-height: 30vh !important;">
+        <div class="card-body">
+          <h3 class="text-center mb-1"><i class="material-icons">Penjualan Menu Bulan <?=$data['month']?></i></h3>
+          <div class="mx-0 my-0 px-0 py-0" style="min-height: 30vh !important; max-height: 30vh !important;">
+            <canvas id="chartSale"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 pb-0 mb-0 d-flex">
+      <div class="card" style="min-height: 30vh !important;">
+        <div class="card-body">
+          <h3 class="text-center mb-1"><i class="material-icons">Rating Menu Bulan <?=$data['month']?></i></h3>
+          <div class="mx-0 my-0 px-0 py-0" style="min-height: 30vh !important; max-height: 30vh !important;">
+            <canvas id="chartRating"></canvas>
           </div>
         </div>
       </div>
