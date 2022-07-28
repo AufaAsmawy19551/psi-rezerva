@@ -1,19 +1,13 @@
 <div class="container-fill">
   <!-- Laporan Pendapatan -->
   <div class="row">
-    <div class="col-md-6 pb-0 mb-0 d-flex">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="text-center mb-1"><i class="material-icons">Pendapatan Tahun <?=$data['year']?> (Rupiah)</i></h3>
-          <canvas id="chartMonth"></canvas>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 pb-0 mb-0 d-flex">
-      <div class="card">
-        <div class="card-body">
+    <div class="col-md-12 pb-0 mb-0 d-flex" >
+      <div class="card" >
+        <div class="card-body" style="min-height: 40vh !important;">
           <h3 class="text-center mb-1"><i class="material-icons">Popularitas Menu Tahun <?=$data['year']?> (Poin)</i></h3>
-          <canvas id="chartTrend"></canvas>
+          <div class="mx-0 my-0 px-0 py-0" style="min-height: 40vh !important; max-height: 40vh !important;">
+            <canvas id="chartTrend"></canvas>
+          </div>
         </div>
       </div>
     </div>
@@ -21,70 +15,93 @@
 
   <div class="row">
     <div class="col-md-6 pb-0 mb-0 d-flex">
-      <div class="card">
+      <div class="card" style="min-height: 40vh !important;">
         <div class="card-body">
-          <h3 class="text-center mb-1"><i class="material-icons">Penjualan Menu Bulan <?=$data['month']?></i></h3>
-          <canvas id="chartSale"></canvas>
+          <h3 class="text-center mb-1"><i class="material-icons">Pendapatan Tahun <?=$data['year']?> (Rupiah)</i></h3>
+          <div class="mx-0 my-0 px-0 py-0" style="min-height: 40vh !important; max-height: 40vh !important;">
+            <canvas id="chartMonth"></canvas>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-6 pb-0 mb-0 d-flex">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="text-center mb-1"><i class="material-icons">Rating Menu Bulan <?=$data['month']?></i></h3>
-          <canvas id="chartRating"></canvas>
+    <div class="col-md-6 pb-0 mb-0 d-flex" style="padding-bottom: 30px !important;">
+
+      <div class="container mx-0 my-0 px-0 py-0" style="padding-bottom: 30px; min-width: 100%;">
+        <div class="row" style="height: 50%;">
+          <div class="col-md-6" style="padding-bottom: 15px;">
+            <div class="card card-stats" style="height: 100%;">
+              <div class="card-header card-header-success card-header-icon">
+                <div class="card-icon">
+                  <i class="material-icons">Pendapatan Hari Ini</i>
+                </div>
+                <p class="card-category">Total</p>
+                <h3 class="card-title font-weight-bold" style="color: #2bffc6!important;"><?= $data['pendapatan_hari_ini'] ?></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" style="padding-bottom: 15px;">
+            <div class="card card-stats" style="height: 100%;">
+              <div class="card-header card-header-success card-header-icon">
+                <div class="card-icon">
+                  <i class="material-icons">Pendapatan Minggu Ini</i>
+                </div>
+                <p class="card-category">Total</p>
+                <h3 class="card-title font-weight-bold" style="color: #2bffc6!important;"><?= $data['pendapatan_minggu_ini'] ?></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="height: 50%;">
+          <div class="col-md-6" style="padding-top: 15px;">
+            <div class="card card-stats" style="height: 100%;">
+              <div class="card-header card-header-danger card-header-icon">
+                <div class="card-icon">
+                  <i class="material-icons">Pendapatan Bulan Ini</i>
+                </div>
+                <p class="card-category">Total</p>
+                <h3 class="card-title font-weight-bold" style="color: #2bffc6!important;"><?= $data['pendapatan_bulan_ini'] ?></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6" style="padding-top: 15px;">
+            <div class="card card-stats" style="height: 100%;">
+              <div class="card-header card-header-danger card-header-icon">
+                <div class="card-icon">
+                  <i class="material-icons">Pendapatan Tahun Ini</i>
+                </div>
+                <p class="card-category">Total</p>
+                <h3 class="card-title font-weight-bold" style="color: #2bffc6!important;"><?= $data['pendapatan_tahun_ini'] ?></h3>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-      <div class="row justify-content-between align-items-center">
-        <div class="col-md-3">
-          <div class="card card-stats">
-            <div class="card-header card-header-success card-header-icon">
-              <div class="card-icon">
-                <i class="material-icons">Pendapatan Hari Ini</i>
-              </div>
-              <p class="card-category">Total</p>
-              <h3 class="card-title font-weight-bold" style="color: #2bffc6!important;"><?= $data['pendapatan_hari_ini'] ?></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card card-stats">
-            <div class="card-header card-header-success card-header-icon">
-              <div class="card-icon">
-                <i class="material-icons">Pendapatan Minggu Ini</i>
-              </div>
-              <p class="card-category">Total</p>
-              <h3 class="card-title font-weight-bold" style="color: #2bffc6!important;"><?= $data['pendapatan_minggu_ini'] ?></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card card-stats">
-            <div class="card-header card-header-danger card-header-icon">
-              <div class="card-icon">
-                <i class="material-icons">Pendapatan Bulan Ini</i>
-              </div>
-              <p class="card-category">Total</p>
-              <h3 class="card-title font-weight-bold" style="color: #2bffc6!important;"><?= $data['pendapatan_bulan_ini'] ?></h3>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card card-stats">
-            <div class="card-header card-header-danger card-header-icon">
-              <div class="card-icon">
-                <i class="material-icons">Pendapatan Tahun Ini</i>
-              </div>
-              <p class="card-category">Total</p>
-              <h3 class="card-title font-weight-bold" style="color: #2bffc6!important;"><?= $data['pendapatan_tahun_ini'] ?></h3>
-            </div>
+  <div class="row">
+    <div class="col-md-6 pb-0 mb-0 d-flex">
+      <div class="card" style="min-height: 40vh !important;">
+        <div class="card-body">
+          <h3 class="text-center mb-1"><i class="material-icons">Penjualan Menu Bulan <?=$data['month']?></i></h3>
+          <div class="mx-0 my-0 px-0 py-0" style="min-height: 40vh !important; max-height: 40vh !important;">
+            <canvas id="chartSale"></canvas>
           </div>
         </div>
       </div>
-
+    </div>
+    <div class="col-md-6 pb-0 mb-0 d-flex">
+      <div class="card" style="min-height: 40vh !important;">
+        <div class="card-body">
+          <h3 class="text-center mb-1"><i class="material-icons">Rating Menu Bulan <?=$data['month']?></i></h3>
+          <div class="mx-0 my-0 px-0 py-0" style="min-height: 40vh !important; max-height: 40vh !important;">
+            <canvas id="chartRating"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="row">
     <div class="col-6 col-lg-3">
