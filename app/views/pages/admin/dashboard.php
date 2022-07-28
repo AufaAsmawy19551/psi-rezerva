@@ -4,7 +4,7 @@
     <div class="col-md-12 pb-0 mb-0 d-flex" >
       <div class="card" >
         <div class="card-body" style="min-height: 40vh !important;">
-          <h3 class="text-center mb-1"><i class="material-icons">Popularitas Menu Tahun <?=$data['year']?> (Poin)</i></h3>
+          <h3 class="text-center mb-1"><i class="material-icons">Trend Analisis Menu Tahun <?=$data['year']?> (Poin)</i></h3>
           <div class="mx-0 my-0 px-0 py-0" style="min-height: 40vh !important; max-height: 40vh !important;">
             <canvas id="chartTrend"></canvas>
           </div>
