@@ -94,7 +94,7 @@ function trend_chart($id){
           datasets: [
             {
               label: 'SATE AYAM',
-              data: [30, 25, 33, 40, 37, 50, 67,],
+              data: [30, 35, 33, 37, 40, 50, 67,],
               borderColor: '#2bffc6',
               backgroundColor: '#2bffc6',
               borderWidth: 2,
